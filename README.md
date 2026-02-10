@@ -57,26 +57,30 @@ Clone the repository using:
 
 ```bash
 git clone https://github.com/yaron4u/EnigmaCracker
+cd EnigmaCracker
 ```
 Remember to install the required libraries using:
 ```bash
-pip install -r requirements.txt
+pip install -r EnigmaCracker/requirements.txt
 ```
 ## Configuration
 
 1. Obtain an Etherscan API key following the instructions [here](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics).
-2. Navigate to the script's directory and insert your API key in EnigmaCracker.env:
+2. Navigate to the EnigmaCracker directory and copy the example environment file:
+```bash
+cp EnigmaCracker.env.example EnigmaCracker.env
+```
+3. Open EnigmaCracker.env and insert your API key:
 ```bash
 # In EnigmaCracker.env
-etherscan_api_key = your_api_key_here <--- Replace with your actual API key
+ETHERSCAN_API_KEY=your_api_key_here
 ```
 ## Execution
 
 Run EnigmaCracker from the command line:
 
 ```bash
-cd path/to/EnigmaCracker
-python EnigmaCracker.py
+python EnigmaCracker/EnigmaCracker.py
 ```
 ---
 ## Running EnigmaCracker in Docker
@@ -90,13 +94,17 @@ python EnigmaCracker.py
 1. **Clone the Repository**  
    If you haven't already, clone the EnigmaCracker repository to your local machine:
    ```bash
-   git clone https://github.com/yaron4u/EnigmaCracker
+   git clone https://github.com/juliuspleunes4/Enigma.git
    ```
 
 2. **Setting Up Environment Variables**  
    Before running the Docker container, you need to set up your environment variables:
-   - Navigate to the cloned directory.
-   - Open the `EnigmaCracker.env` file and replace `your_etherscan_api_key` with your actual Etherscan API key.
+   - Navigate to the `EnigmaCracker-Docker` directory.
+   - Copy the example environment file:
+     ```bash
+     cp EnigmaCracker.env.example EnigmaCracker.env
+     ```
+   - Open the `EnigmaCracker.env` file and replace `your_api_key_here` with your actual Etherscan API key.
    - Open the `docker-compose.yml` file and replace `your_etherscan_api_key` with your actual Etherscan API key.
 
 3. **Building the Docker Image**  

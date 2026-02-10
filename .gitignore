@@ -30,6 +30,7 @@ Thumbs.db
 .env
 .env.local
 EnigmaCracker/EnigmaCracker.env
+EnigmaCracker-Docker/EnigmaCracker.env
 
 # Logs
 *.log
