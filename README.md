@@ -1,7 +1,7 @@
 # EnigmaCracker
 EnigmaCracker is a tool for brute forcing Crypto Wallets
 
-![EnigmaCrackerV2](https://github.com/yaron4u/EnigmaCracker/assets/67191566/de72ea8a-2ec4-4b32-9580-bd80c9715f87)
+![EnigmaCrackerV2](assets/example.gif)
 
 ## ⚠️**Disclaimer**⚠️
 
@@ -28,7 +28,7 @@ Upon execution, EnigmaCracker generates a comprehensive log file named `enigmacr
 
 ## Master Seed and Wallet Generation
 
-![derivation](https://github.com/yaron4u/EnigmaCracker/assets/67191566/bbdcaab5-030f-4e03-b1cb-c816253d27df)
+![hierarchical_deterministic_wallets](assets/hierarchical_deterministic_wallets.png)
 
 EnigmaCracker is engineered around the key principle of the **Master Seed** in cryptocurrency wallet generation, as per the standards described in BIP 32 for Hierarchical Deterministic (HD) Wallets. The Python script provided within this repository is designed to create a mnemonic phrase (also known as a seed phrase), which essentially acts as the **Master Seed** from which all cryptographic keys can be derived.
 
@@ -252,23 +252,3 @@ Setting up EnigmaCracker on an AWS EC2 instance with your Docker image in Amazon
 
 - **Dual Cryptocurrency Detection**: EnigmaCracker now supports detection of both BTC and ETH wallets.
 - **AWS Integration**: I've developed a comprehensive guide to help you deploy EnigmaCracker on AWS (Amazon Web Services). This integration enables you to utilize cloud computing resources for better performance and scalability. The guide includes detailed instructions for setting up EnigmaCracker on Amazon EC2 (Elastic Compute Cloud) instances and using Amazon ECR (Elastic Container Registry) for efficient cloud-based operations.
-
-## How to open the discovered wallet?
-
-For assistance with accessing a discovered wallet, reach me out to [vanitious@gmail.com](mailto:vanitious@gmail.com), for paid service that I provide.
-
-(I will not help anybody that asks for help to setup EnigmaCracker, every email in that subject will be ignored)
-
-### Contributions
-
-If you want to thank me for the prize you found, I will appreciate it!
-
-BTC: bc1qqa207jge9e48syfeevduumq0p6ct79cglu3gn6
-
-ETH: 0xD8E91636cc6F55221545BFB7e1E417f0D2242d17
-
-ADA: addr1q9rans3fgyr6wz23scnuvycgwzh8s6q4h4jfsml3u26ly0j8m8pzjsg85uy4rp38ccfssu9w0p5pt0tynphlrc447glqm4eyzx
-
-USDT (ETH Network): 0xD8E91636cc6F55221545BFB7e1E417f0D2242d17
-
-`Star and watch the repo for updates, and your support is greatly appreciated!`
