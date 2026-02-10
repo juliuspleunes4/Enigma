@@ -32,11 +32,11 @@ Thumbs.db
 Enigma/Enigma.env
 Enigma-Docker/Enigma.env
 
-# Logs
+# Logs and outputs
 *.log
 npm-debug.log*
-Enigma/enigma.log
-Enigma/wallets_with_balance.txt
+Enigma/output/
+Enigma-Docker/output/
 
 # Misc
 .cache/

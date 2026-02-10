@@ -18,13 +18,20 @@ from bip_utils import (
 LOG_FILE_NAME = "enigma.log"
 ENV_FILE_NAME = "Enigma.env"
 WALLETS_FILE_NAME = "wallets_with_balance.txt"
+OUTPUT_DIR_NAME = "output"
 
 # Get the absolute path of the directory where the script is located
 directory = os.path.dirname(os.path.abspath(__file__))
+output_directory = os.path.join(directory, OUTPUT_DIR_NAME)
+
+# Create output directory if it doesn't exist
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
+
 # Initialize directory paths
-log_file_path = os.path.join(directory, LOG_FILE_NAME)
+log_file_path = os.path.join(output_directory, LOG_FILE_NAME)
 env_file_path = os.path.join(directory, ENV_FILE_NAME)
-wallets_file_path = os.path.join(directory, WALLETS_FILE_NAME)
+wallets_file_path = os.path.join(output_directory, WALLETS_FILE_NAME)
 
 # Configure logging
 logging.basicConfig(
