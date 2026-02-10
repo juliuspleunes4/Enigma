@@ -1,4 +1,4 @@
-# EnigmaCracker
+# Enigma
 import subprocess
 import sys
 import os
@@ -17,8 +17,8 @@ from bip_utils import (
 )
 
 # Constants
-LOG_FILE_NAME = "enigmacracker.log"
-ENV_FILE_NAME = "EnigmaCracker.env"
+LOG_FILE_NAME = "enigma.log"
+ENV_FILE_NAME = "Enigma.env"
 WALLETS_FILE_NAME = "wallets_with_balance.txt"
 
 # Global counter for the number of wallets scanned
@@ -73,7 +73,7 @@ if os.environ.get("RUNNING_IN_NEW_CMD") != "TRUE":
 def update_cmd_title():
     # Update the CMD title with the current number of wallets scanned
     if platform.system() == "Windows":
-        os.system(f"title EnigmaCracker.py - Wallets Scanned: {wallets_scanned}")
+        os.system(f"title Enigma.py - Wallets Scanned: {wallets_scanned}")
 
 
 def bip():

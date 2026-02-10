@@ -1,4 +1,4 @@
-# EnigmaCracker for Docker
+# Enigma for Docker
 import sys
 import os
 import requests
@@ -15,8 +15,8 @@ from bip_utils import (
 )
 
 # Constants
-LOG_FILE_NAME = "enigmacracker.log"
-ENV_FILE_NAME = "EnigmaCracker.env"
+LOG_FILE_NAME = "enigma.log"
+ENV_FILE_NAME = "Enigma.env"
 WALLETS_FILE_NAME = "wallets_with_balance.txt"
 
 # Get the absolute path of the directory where the script is located

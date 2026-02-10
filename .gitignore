@@ -29,13 +29,13 @@ Thumbs.db
 # Environment
 .env
 .env.local
-EnigmaCracker/EnigmaCracker.env
-EnigmaCracker-Docker/EnigmaCracker.env
+EnigmaCracker/Enigma.env
+EnigmaCracker-Docker/Enigma.env
 
 # Logs
 *.log
 npm-debug.log*
-EnigmaCracker/enigmacracker.log
+EnigmaCracker/enigma.log
 EnigmaCracker/wallets_with_balance.txt
 
 # Misc
