@@ -24,6 +24,37 @@ If Enigma finds a wallet with a balance, it will create `wallets_with_balance.tx
 
 Upon execution, Enigma generates a comprehensive log file named `Enigma.log`, which neatly records the entire session history for review and analysis.
 
+## 🎲 **Probability & Reality Check**
+
+**Let's talk about the actual odds of finding a funded wallet:**
+
+### The Numbers 📊
+
+- **Total possible 12-word combinations**: 2048^12 ≈ **5.44 × 10^39** (that's 5.44 with 39 zeros!)
+- **Estimated funded wallets** (BTC + ETH): ~200-300 million
+- **Probability per attempt**: ~3.68 × 10^-32 (0.0000000000000000000000000000000368%)
+
+### With Etherscan Free Plan Limits 🔑
+
+- **API calls per day**: 100,000 requests
+- **Wallets checked per day**: 100,000 (1 ETH check per wallet)
+- **Expected time to find ONE wallet**: ~**7.45 × 10^23 years** ⏰
+
+### Put Into Perspective 🌌
+
+- **Age of the universe**: 13.8 billion years
+- **Time needed**: **54 trillion times the age of the universe**
+
+### Why This Exists? 🎓
+
+This tool is an **educational demonstration** of:
+- How cryptocurrency wallet security works through cryptographic randomness
+- The astronomical scale that makes brute force attacks impractical
+- Implementation of BIP39/BIP44 hierarchical deterministic wallets
+- Blockchain API integration
+
+**The odds are astronomically small by design** - this is what makes cryptocurrency secure! This project showcases *why* your crypto wallet is safe from brute force attacks, not how to break them. 🛡️
+
 # ⚙️ Technical Details
 
 ## 🌱 Master Seed and Wallet Generation
