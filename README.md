@@ -1,4 +1,4 @@
-# Enigma
+# 🔐 Enigma
 Enigma is a tool for brute forcing Crypto Wallets
 
 ![EnigmaV2](assets/example.gif)
@@ -16,7 +16,7 @@ This script is developed for educational and research purposes only.
 
 If you do not agree to these terms, please do not use or distribute this code.
 
-## **How it works?**
+## 🤔 **How it works?**
 
 We'll begin by delving into the foundational concepts. Upon establishing a wallet through platforms like **Exodus/TrustWallet** or similar services, users receive a **mnemonic phrase (_seed-phrase_)** comprised of **12 unique words**. The selection of words for this passphrase isn't arbitrary; they are derived from a specific lexicon containing **2048 potential words**. From this collection, the passphrase words are selected at random (**_the entire list of these words is accessible_** [**_HERE_**](https://www.blockplate.com/pages/bip-39-wordlist)). Utilizing this passphrase, an individual has the capability to access their wallet on any device and manage their assets. My application operates by employing brute force techniques to decipher these passphrases.
 
@@ -24,9 +24,9 @@ If Enigma finds a wallet with a balance, it will create `wallets_with_balance.tx
 
 Upon execution, Enigma generates a comprehensive log file named `Enigma.log`, which neatly records the entire session history for review and analysis.
 
-# Technical Details
+# ⚙️ Technical Details
 
-## Master Seed and Wallet Generation
+## 🌱 Master Seed and Wallet Generation
 
 ![hierarchical_deterministic_wallets](assets/hierarchical_deterministic_wallets.png)
 
@@ -34,11 +34,11 @@ Enigma is engineered around the key principle of the **Master Seed** in cryptocu
 
 For a more in-depth understanding of this topic, feel free to explore the detailed documentation available here: [BIP 32 wiki](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki).
 
-### The Role of Master Seed in Enigma
+### 🔑 The Role of Master Seed in Enigma
 
 The script leverages the `bip_utils` library to generate a 12-word BIP39 mnemonic. This mnemonic is a human-readable representation of the wallet's **Master Seed**. This seed is then used to generate seeds for various cryptocurrency wallets, specifically for Bitcoin (BTC) and Ethereum (ETH), by following the BIP44 protocol that defines a logical hierarchy for deterministic wallets.
 
-### Code Workflow:
+### 📋 Code Workflow:
 
 1. **Seed Generation**: The `bip()` function in the script calls upon the BIP39 protocol to generate a new 12-word mnemonic. This is the first and most crucial step in the HD wallet creation process.
     
@@ -51,7 +51,7 @@ The script leverages the `bip_utils` library to generate a 12-word BIP39 mnemoni
 
 Through the integration of BIP39 and BIP44 protocols, Enigma serves as a practical example of how the **Master Seed** forms the bedrock of cryptocurrency wallets, allowing for a secure, hierarchical structure of key derivation and management.
 
-## Installation
+## 📦 Installation
 
 Clone the repository using:
 
@@ -63,19 +63,19 @@ Remember to install the required libraries using:
 ```bash
 pip install -r Enigma/requirements.txt
 ```
-## Configuration
+## ⚙️ Configuration
 
-1. Obtain an Etherscan API key following the instructions [here](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics).
-2. Navigate to the Enigma directory and copy the example environment file:
+1. 🔑 Obtain an Etherscan API key following the instructions [here](https://docs.etherscan.io/getting-started/viewing-api-usage-statistics).
+2. 📂 Navigate to the Enigma directory and copy the example environment file:
 ```bash
 cp Enigma.env.example Enigma.env
 ```
-3. Open Enigma.env and insert your API key:
+3. ✏️ Open Enigma.env and insert your API key:
 ```bash
 # In Enigma.env
 ETHERSCAN_API_KEY=your_api_key_here
 ```
-## Execution
+## ▶️ Execution
 
 Run Enigma from the command line:
 
@@ -83,13 +83,13 @@ Run Enigma from the command line:
 python Enigma/Enigma.py
 ```
 ---
-## Running Enigma in Docker
+## 🐳 Running Enigma in Docker
 
-### Prerequisites
+### ✅ Prerequisites
 - Docker installed on your system. You can download and install Docker from [Docker's official website](https://www.docker.com/get-started).
 - Docker Compose (usually comes with the Docker installation).
 
-### Steps to Run
+### 🏃 Steps to Run
 
 1. **Clone the Repository**  
    If you haven't already, clone the Enigma repository to your local machine:
@@ -131,7 +131,7 @@ python Enigma/Enigma.py
    ```
    This command stops and removes the containers, networks, and volumes created by `docker-compose up`.
 
-### Note
+### 📝 Note
 - The Docker environment provides an isolated and consistent runtime for Enigma.
 - Ensure that the Docker daemon is running before executing these commands.
 - Adjustments to the script or environment variables require a rebuild of the Docker image for changes to take effect.
@@ -139,11 +139,11 @@ python Enigma/Enigma.py
 - **Streamlined Dependencies**: The `requirements.txt` file for the Docker version contains fewer libraries. This is because Docker provides a controlled environment where only the necessary dependencies are included to run the script. This streamlined approach helps in reducing the overall size of the Docker image and improves the efficiency of the script within the container.
 ---
 
-## Running Enigma on AWS
+## ☁️ Running Enigma on AWS
 
 This guide will walk you through the process of using Enigma on AWS. The steps include setting up an Amazon ECR repository for your Docker image, creating an EC2 instance with Ubuntu, and then pulling and running the Enigma Docker container on that instance.
 
-### Step 1: Uploading Your Docker Image to Amazon ECR
+### 📤 Step 1: Uploading Your Docker Image to Amazon ECR
 
 1. **Create an ECR Repository:**
    - Navigate to the Amazon ECR console.
@@ -169,7 +169,7 @@ This guide will walk you through the process of using Enigma on AWS. The steps i
      docker push [your-account-id].dkr.ecr.[your-region].amazonaws.com/Enigma-docker:latest
      ```
 
-### Step 2: Creating an EC2 Instance with Ubuntu OS
+### 🖥️ Step 2: Creating an EC2 Instance with Ubuntu OS
 
 1. **Launch an EC2 Instance:**
    - Go to the EC2 Dashboard in AWS Management Console.
@@ -186,7 +186,7 @@ This guide will walk you through the process of using Enigma on AWS. The steps i
    - Select a key pair or create a new one, and then launch the instance.
    - Once the instance is running, connect to it via SSH.
 
-### Step 3: Pulling and Running the Enigma Docker Container
+### 🚀 Step 3: Pulling and Running the Enigma Docker Container
 
 1. **Install Docker on EC2 Instance:**
    - Connect to your EC2 instance via SSH.
@@ -211,7 +211,7 @@ This guide will walk you through the process of using Enigma on AWS. The steps i
      docker run [your-account-id].dkr.ecr.[your-region].amazonaws.com/Enigma-docker:latest
      ```
 
-### Step 4: Monitoring and Interacting with the Enigma Container
+### 📊 Step 4: Monitoring and Interacting with the Enigma Container
 
 To monitor and interact with the Enigma container running on your EC2 instance, you can use the following steps:
 
@@ -243,11 +243,11 @@ To monitor and interact with the Enigma container running on your EC2 instance, 
      grep -c '!' Enigma.log
      ```
 
-### Conclusion
+### 🎉 Conclusion
 
 Setting up Enigma on an AWS EC2 instance with your Docker image in Amazon ECR offers improved scalability and reliability for your wallet scanning tasks. This approach provides a streamlined and effective solution to harness Enigma’s full potential on a powerful cloud platform.
 
 ---
-## Updates
+## 🆕 Updates
 
-- **Dual Cryptocurrency Detection**: Enigma now supports detection of both BTC and ETH wallets.
+- 💰 **Dual Cryptocurrency Detection**: Enigma now supports detection of both BTC and ETH wallets.
