@@ -56,7 +56,7 @@ Through the integration of BIP39 and BIP44 protocols, EnigmaCracker serves as a 
 Clone the repository using:
 
 ```bash
-git clone https://github.com/yaron4u/EnigmaCracker
+git clone https://github.com/juliuspleunes4/Enigma.git
 cd EnigmaCracker
 ```
 Remember to install the required libraries using:
